@@ -1,0 +1,12 @@
+resources/
+
+public/*
+!public/index.js
+
+node_modules/*
+!node_modules/betterryver/
+
+.vscode/
+
+LICENSE
+package.json
