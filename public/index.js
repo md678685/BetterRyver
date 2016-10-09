@@ -11,12 +11,13 @@ window.onload = function() {
         var currentWindow = require('electron').remote.getCurrentWindow();
         var BetterRyver = require("betterryver");
         var betterRyver = new BetterRyver(currentWindow);
-        betterRyver.init();
 
         window.loadSettings = loadSettings;
 
         require('./javascripts/renderer');
         require('electron').ipcRenderer.sendToHost('window-command', 'window:loaded');
+        
+        betterRyver.init();
     }
     catch (error) {
         var currentWindow = require('electron').remote.getCurrentWindow();
